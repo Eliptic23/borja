@@ -179,7 +179,7 @@ export const validateSMTPUrl = (url: string) => {
  * @returns boolean
  */
 export const validateUrl = (url: string) => {
-  const urlRegex = /^(https?|ftp):\/\/(-\.)?([^\s\/?\.#-]+\.?)+(\/[^\s]*)?$/i;
+  const urlRegex = /^(https?):\/\/(-\.)?([^\s\/?\.#-]+\.?)+(\/[^\s]*)?$/i;
   return urlRegex.test(url);
 };
 
