@@ -179,7 +179,7 @@ export const validateSMTPUrl = (url: string) => {
  * @returns boolean
  */
 export const validateUrl = (url: string) => {
-  const urlRegex = /^(https?):\/\/(-\.)?([^\s\/?\.#-]+\.?)+(\/[^\s]*)?$/;
+  const urlRegex = /^(http|https):\/\/[^ "]+$/;
   return urlRegex.test(url);
 };
 
