@@ -90,6 +90,8 @@
                   active: param.active,
                 })
               "
+              :auto-complete-env="true"
+              :envs="envs"
             />
             <SmartEnvInput
               v-model="param.value"
@@ -102,6 +104,8 @@
                   active: param.active,
                 })
               "
+              :auto-complete-env="true"
+              :envs="envs"
             />
             <span>
               <HoppButtonSecondary
@@ -198,6 +202,7 @@ import { throwError } from "~/helpers/functional/error"
 import { useVModel } from "@vueuse/core"
 import { useNestedSetting } from "~/composables/settings"
 import { toggleNestedSetting } from "~/newstore/settings"
+import { AggregateEnvironment } from "~/newstore/environments"
 
 type Body = HoppRESTReqBody & {
   contentType: "application/x-www-form-urlencoded"
@@ -205,6 +210,7 @@ type Body = HoppRESTReqBody & {
 
 const props = defineProps<{
   modelValue: Body
+  envs: AggregateEnvironment[]
 }>()
 
 const emit = defineEmits<{
