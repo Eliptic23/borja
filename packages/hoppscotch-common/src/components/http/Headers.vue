@@ -90,6 +90,7 @@
               :auto-complete-source="commonHeaders"
               :env-index="index"
               :inspection-results="getInspectorResult(headerKeyResults, index)"
+              :auto-complete-env="true"
               @change="
                 updateHeader(index, {
                   id: header.id,
@@ -106,6 +107,7 @@
                 getInspectorResult(headerValueResults, index)
               "
               :env-index="index"
+              :auto-complete-env="true"
               @change="
                 updateHeader(index, {
                   id: header.id,

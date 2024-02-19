@@ -85,6 +85,7 @@
               :inspection-results="
                 getInspectorResult(parameterKeyResults, index)
               "
+              :auto-complete-env="true"
               @change="
                 updateParam(index, {
                   id: param.id,
@@ -100,6 +101,7 @@
               :inspection-results="
                 getInspectorResult(parameterValueResults, index)
               "
+              :auto-complete-env="true"
               @change="
                 updateParam(index, {
                   id: param.id,
